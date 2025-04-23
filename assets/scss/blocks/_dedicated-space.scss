@@ -1,0 +1,49 @@
+.dedicated__wrap {
+    display: flex;
+    align-items: center;
+}
+
+.dedicated__block {
+    max-width: 789px;
+}
+
+.dedicated__title {
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.dedicated__subtitle {
+    font-size: 21px;
+    color: $light-dark;
+    max-width: 540px;
+    margin-bottom: 36px;
+}
+
+.write__link {
+    margin: unset;
+}
+
+.dedicated__image {
+    position: relative;
+}
+
+.dedicated__img {
+     position: relative;
+    z-index: 100;
+}
+
+.elemnts5 {
+    position: absolute;
+    top: 8%;
+    right: 30%;
+    z-index: 1;
+}
+
+.circle-5 {
+    width: 502px;
+    height: 502px;
+    background-image: linear-gradient(to bottom, #3494e6, #7a8ce7, #ab82dc, #d176c8, #ec6ead);
+    top: 0%;
+    right: 0%;
+    filter: blur(60px);
+}

@@ -16,6 +16,12 @@ body {
     margin: 0 auto; 
     padding: 0 15px;
 
+    &--Xlg {
+        max-width: 1596px;
+    }
+    &--Elg {
+        max-width: 1468px;
+    }
     &--lg {
         max-width: 1347px;
     }
