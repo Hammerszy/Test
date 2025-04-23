@@ -1,0 +1,49 @@
+.hero__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.hero__content {
+    margin-top: 147px;
+}
+
+.hero__title {
+    font-size: 56px;
+    font-weight: 700;
+    max-width: 730px;
+    margin-bottom: 40px;
+}
+
+.hero__subtitle {
+    font-size: 24px;
+    max-width: 421px;
+}
+
+.signup__form {
+    background-color: $white;
+    padding: 58px 64px;
+    width: 483px;
+    border-radius: 30px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.google__signup {
+    background-color: $blue;
+    font-size: 18px;
+    color: $white;
+    width: 356px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    border-radius: 10px;
+    cursor: pointer;
+    img {
+        background-color: $white;
+        border-radius: 7px;
+        padding: 12px;
+    }
+    @include opacity;
+    margin-bottom: 18px;
+}

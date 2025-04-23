@@ -1,0 +1,21 @@
+header {
+    padding-top: 48px;
+    padding-bottom: 76px;
+    nav {
+        display: flex;
+        justify-content: end;
+    }
+}
+
+.header__login {
+    font-size: 18px;
+    @include liner-color;
+    background-color: $white;
+    display: block;
+    width: 136px;
+    padding: 14px 21px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    @include opacity;
+}

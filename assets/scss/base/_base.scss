@@ -8,5 +8,15 @@ body {
     font-family: $font-main;
     color: $dark;
     padding: 0;
+    background-color: $body-bg;
 }
 
+.basic__container {
+    max-width: 1352px;
+    margin: 0 auto; 
+    padding: 0 15px;
+}
+
+a {
+    font-family: $font-main;
+}

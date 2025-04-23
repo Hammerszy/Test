@@ -93,4 +93,96 @@ body {
   font-family: "Trebuchet MS", sans-serif;
   color: #000;
   padding: 0;
+  background-color: #F6F7FA;
+}
+
+.basic__container {
+  max-width: 1352px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+header {
+  padding-top: 48px;
+  padding-bottom: 76px;
+}
+header nav {
+  display: flex;
+  justify-content: end;
+}
+
+.header__login {
+  font-size: 18px;
+  background: linear-gradient(to right, #579AFF, #574DCC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  background-color: #fff;
+  display: block;
+  width: 136px;
+  padding: 14px 21px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: opacity 0.3s ease-in;
+}
+.header__login:hover {
+  opacity: 0.75;
+}
+
+.hero__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.hero__content {
+  margin-top: 147px;
+}
+
+.hero__title {
+  font-size: 56px;
+  font-weight: 700;
+  max-width: 730px;
+  margin-bottom: 40px;
+}
+
+.hero__subtitle {
+  font-size: 24px;
+  max-width: 421px;
+}
+
+.signup__form {
+  background-color: #fff;
+  padding: 58px 64px;
+  width: 483px;
+  border-radius: 30px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.google__signup {
+  background-color: #1A73E8;
+  font-size: 18px;
+  color: #fff;
+  width: 356px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in;
+  margin-bottom: 18px;
+}
+.google__signup img {
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 12px;
+}
+.google__signup:hover {
+  opacity: 0.75;
 }/*# sourceMappingURL=main.css.map */

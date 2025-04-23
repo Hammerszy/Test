@@ -1,0 +1,13 @@
+@mixin liner-color {
+     background: linear-gradient(to right, #579AFF, #574DCC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+@mixin opacity {
+    &:hover {
+        opacity: .75;
+    }
+    transition: opacity 0.3s ease-in;
+}
