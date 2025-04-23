@@ -1,0 +1,51 @@
+.global-about {
+    padding-bottom: 170px;
+}
+
+.about__wrap {
+    background-color: $white;
+    border-radius: 60px;
+    padding: 66px 0 80px 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+}
+
+
+
+.about__txts {
+    max-width: 650px;
+    margin: 0 auto;
+    margin-bottom: 49px;
+    p {
+        font-size: 24px;
+        &:first-child {
+            margin-bottom: 24px;
+        }
+    }
+    span {
+        font-weight: 700;
+    }
+    
+}
+
+.link__free {
+    @include opacity;
+}
+
+.elemnts2 {
+    position: absolute;
+    top: -18%;
+    right: -5%;
+    z-index: 1;
+}
+
+.circle-2 {
+    width: 217px;
+    height: 217px;
+    background-image: linear-gradient(to bottom, #3494e6, #7a8ce7, #ab82dc, #d176c8, #ec6ead);
+    top: 0%;
+    right: 0%;
+    filter: blur(60px);
+}

@@ -1,0 +1,34 @@
+.features-section {
+    padding-bottom: 172px;
+}
+
+.find__wrap {
+    position: relative;
+    z-index: 100;
+}
+
+.feature__block {
+    background-color: $white;
+    padding: 42px 109px 42px 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 30px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 100;
+}
+
+.feature__title {
+    font-size: 24px; 
+    font-family: $font-secondary;
+}
+
+.elemnts4 {
+    position: absolute;
+    top: 14%;
+    left: -20%;
+    z-index: 1;
+}

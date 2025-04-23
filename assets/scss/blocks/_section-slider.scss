@@ -1,0 +1,44 @@
+.section-slider {
+    padding-bottom: 176px;
+}
+
+.slider__wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.sliders__img {
+  display: flex;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+  gap: 40px;
+  position: relative;
+  z-index: 100;
+}
+
+.slides__img {
+  flex-shrink: 0;
+  cursor: grab;
+  img {
+    width: 564px;
+    height: 500px;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+}
+
+
+/* Додаємо текст для прикладу */
+.slides__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}

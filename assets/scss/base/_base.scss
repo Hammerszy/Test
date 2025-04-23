@@ -15,8 +15,42 @@ body {
     max-width: 1352px;
     margin: 0 auto; 
     padding: 0 15px;
+
+    &--lg {
+        max-width: 1347px;
+    }
+    &--sm {
+        max-width: 1324px;
+    }
+    &--Xsm {
+        max-width: 800px;
+    }
 }
 
 a {
     font-family: $font-main;
+}
+
+.h2title__global {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 43px;
+    text-align: center;
+    position: relative;
+    z-index: 100;
+}
+
+.link__free {
+    background: #574DCC;
+    background: linear-gradient(90deg,rgba(87, 77, 204, 1) 0%, rgba(87, 154, 255, 1) 100%);
+    font-size: 24px;
+    font-weight: 700;
+    color: $white;
+    display: block;
+    width: 360px;
+    padding: 21px 0;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Reset and base styles  */
 @import url("https://fonts.cdnfonts.com/css/trebuchet-ms");
 @import url("https://fonts.cdnfonts.com/css/cera-round-pro-demo");
@@ -101,9 +102,41 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+.basic__container--lg {
+  max-width: 1347px;
+}
+.basic__container--sm {
+  max-width: 1324px;
+}
+.basic__container--Xsm {
+  max-width: 800px;
+}
 
 a {
   font-family: "Trebuchet MS", sans-serif;
+}
+
+.h2title__global {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 43px;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+}
+
+.link__free {
+  background: #574DCC;
+  background: linear-gradient(90deg, rgb(87, 77, 204) 0%, rgb(87, 154, 255) 100%);
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+  width: 360px;
+  padding: 21px 0;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 header {
@@ -215,7 +248,7 @@ header nav {
   opacity: 0.75;
 }
 
-span {
+.or {
   display: flex;
   justify-self: center;
   color: #8789A1;
@@ -306,4 +339,255 @@ span {
 
 .pagination-dot.active {
   background-color: #4285f4;
+}
+
+.section-slider {
+  padding-bottom: 176px;
+}
+
+.slider__wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.sliders__img {
+  display: flex;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+  gap: 40px;
+  position: relative;
+  z-index: 100;
+}
+
+.slides__img {
+  flex-shrink: 0;
+  cursor: grab;
+}
+.slides__img img {
+  width: 564px;
+  height: 500px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+/* Додаємо текст для прикладу */
+.slides__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.global-about {
+  padding-bottom: 170px;
+}
+
+.about__wrap {
+  background-color: #fff;
+  border-radius: 60px;
+  padding: 66px 0 80px 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  text-align: center;
+  position: relative;
+  z-index: 1000;
+}
+
+.about__txts {
+  max-width: 650px;
+  margin: 0 auto;
+  margin-bottom: 49px;
+}
+.about__txts p {
+  font-size: 24px;
+}
+.about__txts p:first-child {
+  margin-bottom: 24px;
+}
+.about__txts span {
+  font-weight: 700;
+}
+
+.link__free {
+  transition: opacity 0.3s ease-in;
+}
+.link__free:hover {
+  opacity: 0.75;
+}
+
+.elemnts2 {
+  position: absolute;
+  top: -18%;
+  right: -5%;
+  z-index: 1;
+}
+
+.circle-2 {
+  width: 217px;
+  height: 217px;
+  background-image: linear-gradient(to bottom, #3494e6, #7a8ce7, #ab82dc, #d176c8, #ec6ead);
+  top: 0%;
+  right: 0%;
+  filter: blur(60px);
+}
+
+.joinUs-section {
+  padding-bottom: 172px;
+}
+
+.join__wrap {
+  position: relative;
+}
+
+.blocks__join {
+  position: relative;
+  z-index: 100;
+}
+
+.block__join {
+  background-color: #fff;
+  width: 400px;
+  padding: 40px 34px 34px 42px;
+  border-radius: 40px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.block__join p {
+  font-size: 18px;
+  color: #303030;
+}
+
+.blocks1__join {
+  display: flex;
+  gap: 46px;
+  margin-bottom: 40px;
+}
+
+.blocks2__join {
+  display: flex;
+  justify-content: flex-end;
+  gap: 46px;
+}
+
+.titles__join {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 8px;
+}
+
+.title__join {
+  font-size: 24px;
+  font-weight: 700;
+  color: #303030;
+}
+
+.elemnts3 {
+  position: absolute;
+  top: -3%;
+  right: 20%;
+  z-index: 1;
+}
+
+.gradient-circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-3 {
+  width: 473px;
+  height: 473px;
+  background-image: linear-gradient(to bottom, #3494e6, #7a8ce7, #ab82dc, #d176c8, #ec6ead);
+  top: 0%;
+  right: 0%;
+  filter: blur(85px);
+}
+
+.features-section {
+  padding-bottom: 172px;
+}
+
+.find__wrap {
+  position: relative;
+  z-index: 100;
+}
+
+.feature__block {
+  background-color: #fff;
+  padding: 42px 109px 42px 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 30px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 100;
+}
+
+.feature__title {
+  font-size: 24px;
+  font-family: "Cera Round Pro DEMO", sans-serif;
+}
+
+.elemnts4 {
+  position: absolute;
+  top: 14%;
+  left: -20%;
+  z-index: 1;
+}
+
+.universe-communication {
+  padding-bottom: 217px;
+}
+
+.streaming__titles {
+  max-width: 1131px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.streaming__title {
+  margin-bottom: 26px;
+}
+
+.streaming__subtitle {
+  font-size: 24px;
+  max-width: 558px;
+  margin: 0 auto;
+}
+
+.gallery-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.gallery-track {
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-inner {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item {
+  flex: 0 0 auto;
+  width: 435px;
+  border-radius: 40px;
+  overflow: hidden;
+  height: 435px;
+  cursor: grab;
+  position: relative;
+}
+.gallery-item img {
+  border-radius: 40px;
 }/*# sourceMappingURL=main.css.map */
