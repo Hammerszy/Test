@@ -18,6 +18,10 @@
     margin-bottom: 10px;
     position: relative;
     z-index: 100;
+    @media screen and (max-width: 550px) {
+        flex-direction: column;
+        padding: 40px 31px 32px 31px;
+    }
 }
 
 .feature__title {
@@ -26,6 +30,10 @@
     @media screen and (max-width: 1150px) {
         font-size: 20px;
     }
+    @media screen and (max-width: 550px) {
+        text-align: center;
+        font-size: 16px;
+    }
 }
 
 .elemnts4 {
@@ -33,4 +41,7 @@
     top: 14%;
     left: -20%;
     z-index: 1;
+    @media screen and (max-width: 600px) {
+       display: none;
+    }
 }

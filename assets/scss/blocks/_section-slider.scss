@@ -1,5 +1,8 @@
 .section-slider {
     padding-bottom: 176px;
+    @media screen and (max-width: 600px) {
+      padding-bottom: 61px;
+    }
 }
 
 .slider__wrapper {
@@ -40,6 +43,9 @@
     }
     @media screen and (max-width: 1024px) {
       width: 364px;
+    }
+    @media screen and (max-width: 600px) {
+      width: 280px;
     }
   }
 }
