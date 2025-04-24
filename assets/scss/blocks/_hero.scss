@@ -7,6 +7,10 @@
   justify-content: space-between;
   align-items: start;
   position: relative;
+  @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      gap: 40px;
+  }
 }
 
 .elemnts1 {
@@ -19,6 +23,11 @@
 
   @media screen and (max-width: 1530px) {
       right: 1%
+  }
+  @media screen and (max-width: 1024px) {
+      right: unset;
+      left: 67%;
+      top: 75%;
   }
 }
 
@@ -48,6 +57,10 @@
 
 .hero__content {
   margin-top: 147px;
+  @media screen and (max-width: 1024px) {
+      margin: 0 auto;
+      text-align: center;
+  }
 }
 
 .hero__title {
@@ -59,6 +72,9 @@
       font-size: 45px;
       margin-bottom: 24px;
   }
+  @media screen and (max-width: 1024px) {
+      font-size: 35px;
+  }
 }
 
 .hero__subtitle {
@@ -66,6 +82,9 @@
   max-width: 421px;
   @media screen and (max-width: 1148px) {
       font-size: 20px;
+  }
+  @media screen and (max-width: 1024px) {
+      margin: 0 auto;
   }
 }
 
@@ -150,6 +169,9 @@
   z-index: 100;
   overflow: hidden;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  @media screen and (max-width: 1024px) {
+      margin: 0 auto;
+  }
 }
 
 .slides {

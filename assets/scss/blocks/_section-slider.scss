@@ -21,6 +21,9 @@
   gap: 40px;
   position: relative;
   z-index: 100;
+  @media screen and (max-width: 1024px) {
+      gap: 0;
+    }
 }
 
 .slides__img {
@@ -34,6 +37,9 @@
     @media screen and (max-width: 1288px) {
       width: 450px;
       height: unset;
+    }
+    @media screen and (max-width: 1024px) {
+      width: 364px;
     }
   }
 }

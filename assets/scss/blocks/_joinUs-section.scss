@@ -21,6 +21,9 @@
     p {
         font-size: 18px;
         color: $light-dark;
+        @media screen and (max-width: 1024px) {
+            font-size: 16px;
+        }
     }
 }
 
@@ -47,6 +50,9 @@
     font-size: 24px;
     font-weight: 700;
     color: $light-dark;
+    @media screen and (max-width: 1024px) {
+      font-size: 20px;
+    }
 }
 
 .elemnts3 {
@@ -72,4 +78,8 @@
   top: 0%;
   right: 0%;
   filter: blur(85px);
+  @media screen and (max-width: 1024px) {
+    width: 366px;
+    height: 391px;
+  }
 }

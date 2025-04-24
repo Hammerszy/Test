@@ -49,6 +49,9 @@ a {
       font-size: 45px;
       margin-bottom: 35px;
     }
+    @media screen and (max-width: 1024px) {
+      font-size: 35px;
+    }
 }
 
 .link__free {
