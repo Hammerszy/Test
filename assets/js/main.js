@@ -191,131 +191,130 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //galerry 
 
- document.addEventListener("DOMContentLoaded", function () {
-   const galleryInner = document.querySelector(".gallery-inner");
-   const galleryItems = document.querySelectorAll(".gallery-item");
-   const itemCount = galleryItems.length;
+document.addEventListener("DOMContentLoaded", function () {
+  const galleryInner = document.querySelector(".gallery-inner");
+  const galleryItems = document.querySelectorAll(".gallery-item");
+  const itemCount = galleryItems.length;
 
-   let startX, moveX;
-   let currentTranslate = 0;
-   let prevTranslate = 0;
-   let isDragging = false;
-   let currentIndex = 0;
-   let animationID = 0;
-   let interval;
+  let startX, moveX;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  let isDragging = false;
+  let currentIndex = 0;
+  let animationID = 0;
+  let interval;
 
-   function setupGallery() {
-     const trackWidth = document.querySelector(".gallery-track").offsetWidth;
-     const itemWidth = galleryItems[0].offsetWidth;
-     const itemMargin = 10; // margin-left + margin-right
-     const totalItemWidth = itemWidth + itemMargin;
+  function setupGallery() {
+    const trackWidth = document.querySelector(".gallery-track").offsetWidth;
+    const itemWidth = galleryItems[0].offsetWidth;
+    const itemMargin = 10; // margin-left + margin-right
+    const totalItemWidth = itemWidth + itemMargin;
 
-     const visibleItems = Math.floor(trackWidth / totalItemWidth);
+    const totalWidth = itemCount * totalItemWidth;
 
-     const totalWidth = itemCount * totalItemWidth;
+    galleryInner.style.width = `${totalWidth}px`;
 
-     galleryInner.style.width = `${totalWidth}px`;
+    // Start from left side instead of center
+    const offset = 0;
+    galleryInner.style.transform = `translateX(${offset}px)`;
 
-     const offset = (trackWidth - visibleItems * totalItemWidth) / 2;
-     galleryInner.style.transform = `translateX(${offset}px)`;
+    currentTranslate = offset;
+    prevTranslate = offset;
+  }
 
-     currentTranslate = offset;
-     prevTranslate = offset;
-   }
+  function startAutoSlide() {
+    interval = setInterval(() => {
+      const trackWidth = document.querySelector(".gallery-track").offsetWidth;
+      const itemWidth = galleryItems[0].offsetWidth;
+      const itemMargin = 10;
+      const totalItemWidth = itemWidth + itemMargin;
 
-   function startAutoSlide() {
-     interval = setInterval(() => {
-       const trackWidth = document.querySelector(".gallery-track").offsetWidth;
-       const itemWidth = galleryItems[0].offsetWidth;
-       const itemMargin = 10;
-       const totalItemWidth = itemWidth + itemMargin;
+      currentTranslate -= totalItemWidth;
 
-       currentTranslate -= totalItemWidth;
+      const maxTranslate = -(galleryInner.offsetWidth - trackWidth);
 
-       const maxTranslate = -(galleryInner.offsetWidth - trackWidth + totalItemWidth / 2);
+      if (currentTranslate < maxTranslate) {
+        currentTranslate = 0; // Reset to left side
+      }
 
-       if (currentTranslate < maxTranslate) {
-        currentTranslate = (trackWidth - (itemWidth + itemMargin)) / 2;
-       }
+      prevTranslate = currentTranslate;
+      setSliderPosition();
+    }, 3000);
+  }
 
-       prevTranslate = currentTranslate;
-       setSliderPosition();
-     }, 3000);
-   }
+  function setSliderPosition() {
+    galleryInner.style.transform = `translateX(${currentTranslate}px)`;
+  }
 
-   function setSliderPosition() {
-     galleryInner.style.transform = `translateX(${currentTranslate}px)`;
-   }
+  function resetInterval() {
+    clearInterval(interval);
+    startAutoSlide();
+  }
 
-   function resetInterval() {
-     clearInterval(interval);
-     startAutoSlide();
-   }
+  galleryItems.forEach((item) => {
+    const preventDragHandler = (e) => {
+      e.preventDefault();
+    };
 
-   galleryItems.forEach((item) => {
-     const preventDragHandler = (e) => {
-       e.preventDefault();
-     };
+    item.addEventListener("dragstart", preventDragHandler);
 
-     item.addEventListener("dragstart", preventDragHandler);
+    item.addEventListener("mousedown", startDrag);
+    item.addEventListener("touchstart", startDrag, { passive: true });
+  });
 
-     item.addEventListener("mousedown", startDrag);
-     item.addEventListener("touchstart", startDrag, { passive: true });
-   });
+  function startDrag(event) {
+    isDragging = true;
+    startX = event.type.includes("mouse") ? event.clientX : event.touches[0].clientX;
 
-   function startDrag(event) {
-     isDragging = true;
-     startX = event.type.includes("mouse") ? event.clientX : event.touches[0].clientX;
+    cancelAnimationFrame(animationID);
+    clearInterval(interval);
 
-     cancelAnimationFrame(animationID);
-     clearInterval(interval);
+    galleryInner.style.transition = "none";
+  }
 
-     galleryInner.style.transition = "none";
-   }
+  document.addEventListener("mousemove", drag);
+  document.addEventListener("touchmove", drag, { passive: false });
 
-   document.addEventListener("mousemove", drag);
-   document.addEventListener("touchmove", drag, { passive: false });
+  function drag(event) {
+    if (!isDragging) return;
 
-   function drag(event) {
-     if (!isDragging) return;
+    const currentX = event.type.includes("mouse") ? event.clientX : event.touches[0].clientX;
 
-     const currentX = event.type.includes("mouse") ? event.clientX : event.touches[0].clientX;
+    moveX = currentX - startX;
+    currentTranslate = prevTranslate + moveX;
 
-     moveX = currentX - startX;
-     currentTranslate = prevTranslate + moveX;
+    setSliderPosition();
 
-     setSliderPosition();
+    if (event.type.includes("touch")) {
+      event.preventDefault();
+    }
+  }
 
-     if (event.type.includes("touch")) {
-       event.preventDefault();
-     }
-   }
+  document.addEventListener("mouseup", endDrag);
+  document.addEventListener("touchend", endDrag);
 
-   document.addEventListener("mouseup", endDrag);
-   document.addEventListener("touchend", endDrag);
+  function endDrag() {
+    if (!isDragging) return;
+    isDragging = false;
 
-   function endDrag() {
-     if (!isDragging) return;
-     isDragging = false;
+    galleryInner.style.transition = "transform 0.5s ease";
 
-     galleryInner.style.transition = "transform 0.5s ease";
+    prevTranslate = currentTranslate;
 
-     prevTranslate = currentTranslate;
+    resetInterval();
+  }
 
-     resetInterval();
-   }
+  window.addEventListener("load", function () {
+    setupGallery();
+    startAutoSlide();
+  });
 
-   window.addEventListener("load", function () {
-     setupGallery();
-     startAutoSlide();
-   });
-
-   window.addEventListener("resize", function () {
-     clearInterval(interval);
-     setupGallery();
-     startAutoSlide();
-   });
- });
+  window.addEventListener("resize", function () {
+    clearInterval(interval);
+    setupGallery();
+    startAutoSlide();
+  });
+});
 
 //linf-for-form
 
