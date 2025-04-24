@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test</title>
-    <link rel="stylesheet" href="./assets/css/main.css"/>
+    <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
     <header class="header">
@@ -25,23 +25,21 @@
             </div>
 
             <div class="dedicated__image dedicated-image__adapt">
-                <div class="elemnts5">
-                      <!-- <img src="./assets/img/elements1.png" alt="elements"> -->
-                    <div class="gradient-circle circle-5"></div>
-                  </div>
-                <img class="dedicated__img" src="./assets/img/pic.png" alt="iPhone 13 Pro">
+              <div class="elemnts5">
+                <!-- <img src="./assets/img/elements1.png" alt="elements"> -->
+                <div class="gradient-circle circle-5"></div>
+              </div>
+              <img class="dedicated__img" src="./assets/img/pic.png" alt="iPhone 13 Pro" />
 
-                <a href="#!" class="link__free link__signup">Sign up now</a>
+              <a href="#!" class="link__free link__signup">Sign up now</a>
             </div>
 
             <div class="dedicated__block dedicated-block__adapt">
-                      <h2 class="h2title__global dedicated__title">
-                        It’s a dedicated space for your bold fantasies!
-                      </h2>
-                      <p class="dedicated__subtitle">
-                        Hundreds of attractive admirers are already waiting for you here. 
-                      Don’t delay – dive into the world of streaming, flirting, and hot communication right now!
-                  </p>
+              <h2 class="h2title__global dedicated__title">It’s a dedicated space for your bold fantasies!</h2>
+              <p class="dedicated__subtitle">
+                Hundreds of attractive admirers are already waiting for you here. Don’t delay – dive into the world of
+                streaming, flirting, and hot communication right now!
+              </p>
             </div>
 
             <div class="container__form">
@@ -77,6 +75,19 @@
                         placeholder="8+ characters"
                         required
                       />
+                      <button
+                        type="button"
+                        class="password-toggle"
+                        id="togglePassword"
+                        aria-label="Toggle password visibility"
+                      >
+                        <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <path
+                            d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                          />
+                        </svg>
+                      </button>
+
                     </div>
 
                     <button type="button" class="google__signup">
@@ -97,8 +108,8 @@
                     <div class="sign__group">
                       <label class="sign__label">I am</label>
                       <div class="gender-options">
-                        <div class="gender-option" onclick="selectGender('male')">Male</div>
-                        <div class="gender-option" onclick="selectGender('female')">Female</div>
+                        <div class="gender-option" id="male" onclick="selectGender('male')">Male</div>
+                        <div class="gender-option" id="female" onclick="selectGender('female')">Female</div>
                       </div>
                     </div>
 
@@ -122,11 +133,10 @@
                     <div class="terms-checkbox">
                       <input class="input__checkbox" type="checkbox" id="terms" name="terms" required />
                       <label class="label__checkbox" for="terms">
-                       I have read understand and agree to Terms of Use, Privacy Policy, Disclosures&Disclaimers.
+                        I have read understand and agree to Terms of Use, Privacy Policy, Disclosures&Disclaimers.
                       </label>
                     </div>
-                  <a href="#!" class="link__free sign__now">Sign up now</a>
-
+                    <a href="#!" class="link__free sign__now">Sign up now</a>
                   </form>
                 </div>
               </div>
@@ -197,6 +207,12 @@
       <section class="global-about">
         <div class="basic__container basic__container--lg">
           <div class="about__wrap">
+
+            <div class="elemnts2">
+              <!-- <img src="./assets/img/elements1.png" alt="elements"> -->
+              <div class="gradient-circle circle-2"></div>
+            </div>
+
             <h2 class="h2title__global">About</h2>
             <div class="about__txts">
               <p>
@@ -217,10 +233,7 @@
 
             <a href="#!" class="link__free">Join for free</a>
 
-            <div class="elemnts2">
-              <!-- <img src="./assets/img/elements1.png" alt="elements"> -->
-              <div class="gradient-circle circle-2"></div>
-            </div>
+            
           </div>
         </div>
       </section>
@@ -284,17 +297,17 @@
                 </div>
               </div>
 
-              <div class="slider-container">
-          <div class="slideres">
-            <!-- Slides will be added dynamically via JavaScript -->
-          </div>
-        </div>
-        <div class="slider-pagination">
-          <!-- Dots will be added dynamically via JavaScript -->
-        </div>
+              <div class="slider-container__join">
+                <div class="slideres">
+                  <!-- Slides will be added dynamically via JavaScript -->
+                </div>
+              </div>
+              <div class="slider-pagination">
+                <!-- Dots will be added dynamically via JavaScript -->
+              </div>
             </div>
 
-            <img class="image-join__adapt" src="./assets/img/slider-galerry/4.png" alt="">
+            <img class="image-join__adapt" src="./assets/img/slider-galerry/4.png" alt="" />
           </div>
         </div>
       </section>
@@ -346,11 +359,10 @@
         </div>
 
         <div class="gallery-wrapper">
-
-          <div class="elemnts3">
-              <!-- <img src="./assets/img/elements1.png" alt="elements"> -->
-              <div class="gradient-circle circle-3"></div>
-            </div>
+          <div class="elemnts3 elemnts3-adapt">
+            <!-- <img src="./assets/img/elements1.png" alt="elements"> -->
+            <div class="gradient-circle circle-3"></div>
+          </div>
 
           <div class="gallery-track">
             <div class="gallery-inner">
@@ -393,372 +405,89 @@
           </div>
         </div>
 
-        <a href="#!" class="link__free">Join for free</a>
+        <div class="gallry__free">
+          <a href="#!" class="link__free">Join for free</a>
+        </div>
       </section>
 
       <section class="dedicated-space">
-          <div class="basic__container basic__container--Xlg">
-               <div class="dedicated__wrap">
-                  <div class="dedicated__block">
-                      <h2 class="h2title__global dedicated__title">
-                        It’s a dedicated space for your bold fantasies!
-                      </h2>
-                      <p class="dedicated__subtitle">
-                        Hundreds of attractive admirers are already waiting for you here. 
-                        Don’t delay – dive into the world of streaming, flirting, and hot communication right now!
-                      </p>
-                      <a href="#!" class="link__free write__link">Write to her</a>
-                  </div>
+        <div class="basic__container basic__container--Xlg">
+          <div class="dedicated__wrap">
+            <div class="dedicated__block">
+              <h2 class="h2title__global dedicated__title">It’s a dedicated space for your bold fantasies!</h2>
+              <p class="dedicated__subtitle">
+                Hundreds of attractive admirers are already waiting for you here. Don’t delay – dive into the world of
+                streaming, flirting, and hot communication right now!
+              </p>
+              <a href="#!" class="link__free write__link">Write to her</a>
+            </div>
 
-                  <div class="dedicated__image ">
-                      <div class="elemnts5">
-                        <!-- <img src="./assets/img/elements1.png" alt="elements"> -->
-                        <div class="gradient-circle circle-5"></div>
-                      </div>
-                      <img class="dedicated__img" src="./assets/img/pic.png" alt="iPhone 13 Pro">
-                  </div>
-               </div>
+            <div class="dedicated__image">
+              <div class="elemnts5">
+                <!-- <img src="./assets/img/elements1.png" alt="elements"> -->
+                <div class="gradient-circle circle-5"></div>
+              </div>
+              <img class="dedicated__img" src="./assets/img/pic.png" alt="iPhone 13 Pro" />
+            </div>
           </div>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
-        <div class="basic__container basic__container--Elg">
-            <div class="footer__wrap">
-                <nav class="footer__nav">
-                  <ul class="footer-nav__list">
-                      <li>
-                         <a href="#!">support@gmail.com</a>
-                      </li>
-                      <li>
-                         <a href="#!">Unsubscribe</a>
-                      </li>
-                  </ul>
+      <div class="basic__container basic__container--Elg">
+        <div class="footer__wrap">
+          <nav class="footer__nav">
+            <ul class="footer-nav__list">
+              <li>
+                <a href="#!">support@gmail.com</a>
+              </li>
+              <li>
+                <a href="#!">Unsubscribe</a>
+              </li>
+            </ul>
 
-                  <ul class="footer-nav__list">
-                      <li>
-                         <h3>
-                            Legal terms
-                         </h3>
-                      </li>
-                      <li>
-                         <a href="#!">Terms of Use</a>
-                      </li>
-                      <li>
-                         <a href="#!">Diclosures&Disclaimers</a>
-                      </li>
-                  </ul>
+            <ul class="footer-nav__list">
+              <li>
+                <h3>Legal terms</h3>
+              </li>
+              <li>
+                <a href="#!">Terms of Use</a>
+              </li>
+              <li>
+                <a href="#!">Diclosures&Disclaimers</a>
+              </li>
+            </ul>
 
-                   <ul class="footer-nav__list">
-                      <li>
-                         <h3>
-                            Privacy info
-                         </h3>
-                      </li>
-                      <li>
-                         <a href="#!">Privacy Policy</a>
-                      </li>
-                      <li>
-                         <a href="#!">Cookie Policy</a>
-                      </li>
-                  </ul>
+            <ul class="footer-nav__list">
+              <li>
+                <h3>Privacy info</h3>
+              </li>
+              <li>
+                <a href="#!">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#!">Cookie Policy</a>
+              </li>
+            </ul>
 
-                   <ul class="footer-nav__list">
-                      <li>
-                         <h3>
-                            About
-                         </h3>
-                      </li>
-                      <li>
-                         <a href="#!">About Us</a>
-                      </li>
-                      
-                  </ul>
-                </nav>
-            </div>
+            <ul class="footer-nav__list">
+              <li>
+                <h3>About</h3>
+              </li>
+              <li>
+                <a href="#!">About Us</a>
+              </li>
+            </ul>
+          </nav>
         </div>
+      </div>
     </footer>
 
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
 
-
-
-
 <style>
-    /* .section__join {
-      padding: 30px 0;
-    }
 
-    .section__join h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 2.5rem;
-    }
-
-    .blocks__join {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .blocks1__join,
-    .blocks2__join {
-      display: flex;
-      gap: 20px;
-    }
-
-    .block__join {
-      flex: 1;
-      background-color: white;
-      border-radius: 20px;
-      padding: 25px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .titles__join {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 15px;
-    }
-
-    .titles__join img {
-      width: 40px;
-      height: 40px;
-    }
-
-    .title__join {
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-
-    .block__join p {
-      color: #333;
-      line-height: 1.5;
-    }*/
-
-
-    .slider-container {
-      display: none; 
-    } 
-
-    @media (max-width: 500px) {
-      .blocks1__join,
-      .blocks2__join {
-        display: none; /* Hide original layout */
-      }
-
-      .slider-container {
-        display: block;
-        width: 100%;
-        position: relative;
-        overflow: hidden;
-        border-radius: 20px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      }
-
-      .slideres {
-        display: flex;
-        transition: transform 0.4s ease;
-        width: 100%;
-      }
-
-      .slidee{
-        flex: 0 0 100%;
-        width: 100%;
-        background-color: white;
-        padding: 25px;
-      }
-
-      /* Pagination dots */
-      /* .slider-pagination {
-        display: flex;
-        justify-content: center;
-        margin-top: 15px;
-        gap: 8px;
-      } */
-
-      .slider-pagination {
-        display: none;
-      }
-      .dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #ccc;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .dot.active {
-        background-color: #666;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- <div class="container">
-    <section class="section__join">
-      <h2>Why join us?</h2>
-      
-      <div class="blocks__join">
-        <div class="blocks1__join">
-          <div class="block__join" id="block1">
-            <div class="titles__join">
-              <img src="./assets/img/svg/air.svg" alt="Air" />
-              <h3 class="title__join">Chat with attractive streamers for free</h3>
-            </div>
-            <p>
-              It's an excellent web platform for streaming. Write messages to the beautiful streamers for free and
-              explore this magical universe of communication!
-            </p>
-          </div>
-
-          <div class="block__join" id="block2">
-            <div class="titles__join">
-              <img src="./assets/img/svg/lock.svg" alt="Lock" />
-              <h3 class="title__join">Only verified users</h3>
-            </div>
-            <p>
-              We care about the privacy and security of our customers. All accounts are verified so look for an
-              attractive stranger confidently!
-            </p>
-          </div>
-        </div>
-
-        <div class="blocks2__join">
-          <div class="block__join" id="block3">
-            <div class="titles__join">
-              <img src="./assets/img/svg/dandruff.svg" alt="Search" />
-              <h3 class="title__join">Customized search</h3>
-            </div>
-            <p>
-              Match alluring partners for your own preferences. Maybe you will be interested in a hot slender
-              European or shy beautiful Asian? Make your choice…
-            </p>
-          </div>
-
-          <div class="block__join" id="block4">
-            <div class="titles__join">
-              <img src="./assets/img/svg/ok.svg" alt="OK" />
-              <h3 class="title__join">Easy to use</h3>
-            </div>
-            <p>
-              Forget about hundreds of annoying notifications and inconvenient use. We have created the platform
-              as easy to use and search as possible. Don't waste your time studying functionality. Just enjoy!
-            </p>
-          </div>
-        </div>
-        
-        <div class="slider-container">
-          <div class="slider">
-          </div>
-        </div>
-        <div class="slider-pagination">
-        </div>
-      </div>
-    </section>
-  </div> -->
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Select all blocks and containers
-      const blocks = document.querySelectorAll('.block__join');
-      const sliderContainer = document.querySelector('.slider-container');
-      const slider = document.querySelector('.slideres');
-      const paginationContainer = document.querySelector('.slider-pagination');
-      
-      // Create slider from blocks
-      blocks.forEach((block, index) => {
-        // Create slide
-        const slide = document.createElement('div');
-        slide.classList.add('slidee');
-        slide.innerHTML = block.innerHTML;
-        slider.appendChild(slide);
-        
-        // Create pagination dot
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (index === 0) dot.classList.add('active');
-        dot.setAttribute('data-index', index);
-        dot.addEventListener('click', () => goToSlide(index));
-        paginationContainer.appendChild(dot);
-      });
-      
-      // Slider functionality
-      let currentSlide = 0;
-      const slidesCount = blocks.length;
-      let autoSlideInterval;
-      
-      // Function to go to specific slide
-      function goToSlide(index) {
-        currentSlide = index;
-        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-        
-        // Update active dot
-        document.querySelectorAll('.dot').forEach((dot, i) => {
-          dot.classList.toggle('active', i === currentSlide);
-        });
-      }
-      
-      // Function for next slide
-      function nextSlide() {
-        goToSlide((currentSlide + 1) % slidesCount);
-      }
-      
-      // Function for previous slide
-      function prevSlide() {
-        goToSlide((currentSlide - 1 + slidesCount) % slidesCount);
-      }
-      
-      // Touch swipe functionality
-      let touchStartX = 0;
-      let touchEndX = 0;
-      
-      slider.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-        clearInterval(autoSlideInterval); // Pause auto-sliding when user touches
-      }, { passive: true });
-      
-      slider.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-        startAutoSlide(); // Resume auto-sliding
-      }, { passive: true });
-      
-      function handleSwipe() {
-        const swipeThreshold = 50; // Minimum swipe distance
-        
-        if (touchStartX - touchEndX > swipeThreshold) {
-          // Swipe left - next slide
-          nextSlide();
-        } else if (touchEndX - touchStartX > swipeThreshold) {
-          // Swipe right - previous slide
-          prevSlide();
-        }
-      }
-      
-      // Auto-sliding functionality
-      function startAutoSlide() {
-        clearInterval(autoSlideInterval);
-        autoSlideInterval = setInterval(() => {
-          nextSlide();
-        }, 4000); // Change slide every 4 seconds
-      }
-      
-      // Check screen width to initialize slider if needed
-      function checkWidth() {
-        if (window.innerWidth <= 500) {
-          startAutoSlide();
-        } else {
-          clearInterval(autoSlideInterval);
-        }
-      }
-      
-      // Check width on load and window resize
-      window.addEventListener('resize', checkWidth);
-      checkWidth();
-    });
-  </script>
+</style>

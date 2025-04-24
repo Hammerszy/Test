@@ -91,6 +91,9 @@
     font-size: 30px;
     margin-bottom: 20px;
   }
+  @media screen and (max-width: 500px) {
+    font-size: 24px;
+  }
 }
 
 .hero__subtitle {
@@ -101,6 +104,9 @@
   }
   @media screen and (max-width: 1024px) {
     margin: 0 auto;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 16px;
   }
 }
 
@@ -131,6 +137,9 @@
   @media screen and (max-width: 500px) {
     font-size: 16px;
   }
+  @media screen and (max-width: 320px) {
+    gap: 15px;
+  }
 }
 
 .or {
@@ -148,6 +157,32 @@
   margin-bottom: 29px;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.sign__input:focus {
+  outline: none;
+  border-color: #6e7ff3;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 38px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.eye-icon {
+  width: 24px;
+  height: 24px;
+  fill: #999;
+}
+
+.eye-icon:hover {
+  fill: #666;
 }
 
 .sign__label {
@@ -198,6 +233,13 @@
   @media screen and (max-width: 500px) {
     font-size: 12px;
     margin: 0 auto;
+  }
+}
+
+.sign__now {
+  @media screen and (max-width: 500px) {
+    font-size: 14px;
+    padding: 12px 0;
   }
 }
 
@@ -310,9 +352,20 @@
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
   }
+
   @media screen and (max-width: 500px) {
     font-size: 12px;
   }
+}
+
+.gender-option.active {
+  background-color: $light-purple;
+  color: $blue;
+  font-weight: 500;
+}
+
+.gender-option:hover:not(.active) {
+  background-color: $light-purple;
 }
 
 .terms-checkbox {

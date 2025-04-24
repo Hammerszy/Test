@@ -25,7 +25,7 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
   @media screen and (max-width: 600px) {
-      padding: 30px 22px 27px 22px;
+    padding: 30px 22px 27px 22px;
   }
   p {
     font-size: 18px;
@@ -81,7 +81,7 @@
   right: 20%;
   z-index: 1;
   @media screen and (max-width: 500px) {
-       top: 38%;
+    top: 38%;
     right: 11%;
   }
 }
@@ -103,8 +103,8 @@
     height: 391px;
   }
   @media screen and (max-width: 500px) {
-      width: 409px;
-      height: 409px;
+    width: 409px;
+    height: 409px;
   }
 }
 
@@ -116,5 +116,62 @@
     z-index: 100;
     border-radius: 30px;
     margin: 0 auto;
+  }
+}
+
+.slider-container__join {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .blocks1__join,
+  .blocks2__join {
+    display: none; /* Hide original layout */
+  }
+
+  .slider-container__join {
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .slideres {
+    display: flex;
+    transition: transform 0.4s ease;
+    width: 100%;
+  }
+
+  .slidee {
+    flex: 0 0 100%;
+    width: 100%;
+    background-color: white;
+    padding: 25px;
+  }
+
+  /* Pagination dots */
+  /* .slider-pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 8px;
+      } */
+
+  .slider-pagination {
+    display: none;
+  }
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .dot.active {
+    background-color: #666;
   }
 }

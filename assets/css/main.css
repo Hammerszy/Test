@@ -169,6 +169,8 @@ a {
   border-radius: 10px;
   text-align: center;
   margin: 0 auto;
+  position: relative;
+  z-index: 100;
 }
 @media screen and (max-width: 1148px) {
   .link__free {
@@ -181,6 +183,20 @@ a {
     font-size: 20px;
     width: 320px;
   }
+}
+@media screen and (max-width: 450px) {
+  .link__free {
+    width: 280px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .link__free {
+    width: 100%;
+  }
+}
+
+.gallry__free {
+  padding: 0 30px;
 }
 
 header {
@@ -331,6 +347,11 @@ header nav {
     margin-bottom: 20px;
   }
 }
+@media screen and (max-width: 500px) {
+  .hero__title {
+    font-size: 24px;
+  }
+}
 
 .hero__subtitle {
   font-size: 24px;
@@ -344,6 +365,11 @@ header nav {
 @media screen and (max-width: 1024px) {
   .hero__subtitle {
     margin: 0 auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero__subtitle {
+    font-size: 16px;
   }
 }
 
@@ -384,6 +410,11 @@ header nav {
     font-size: 16px;
   }
 }
+@media screen and (max-width: 320px) {
+  .google__signup {
+    gap: 15px;
+  }
+}
 
 .or {
   display: flex;
@@ -402,6 +433,32 @@ header nav {
   margin-bottom: 29px;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.sign__input:focus {
+  outline: none;
+  border-color: #6e7ff3;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 38px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.eye-icon {
+  width: 24px;
+  height: 24px;
+  fill: #999;
+}
+
+.eye-icon:hover {
+  fill: #666;
 }
 
 .sign__label {
@@ -464,6 +521,13 @@ header nav {
   .info__sign {
     font-size: 12px;
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sign__now {
+    font-size: 14px;
+    padding: 12px 0;
   }
 }
 
@@ -593,6 +657,16 @@ header nav {
   }
 }
 
+.gender-option.active {
+  background-color: #595B75;
+  color: #1A73E8;
+  font-weight: 500;
+}
+
+.gender-option:hover:not(.active) {
+  background-color: #595B75;
+}
+
 .terms-checkbox {
   display: flex;
   align-items: flex-start;
@@ -681,6 +755,11 @@ input[type=checkbox] {
 
 .global-about {
   padding-bottom: 170px;
+}
+@media screen and (max-width: 600px) {
+  .global-about {
+    padding-bottom: 55px;
+  }
 }
 
 .about__wrap {
@@ -899,8 +978,63 @@ input[type=checkbox] {
   }
 }
 
+.slider-container__join {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .blocks1__join,
+  .blocks2__join {
+    display: none; /* Hide original layout */
+  }
+  .slider-container__join {
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  .slideres {
+    display: flex;
+    transition: transform 0.4s ease;
+    width: 100%;
+  }
+  .slidee {
+    flex: 0 0 100%;
+    width: 100%;
+    background-color: white;
+    padding: 25px;
+  }
+  /* Pagination dots */
+  /* .slider-pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 8px;
+      } */
+  .slider-pagination {
+    display: none;
+  }
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .dot.active {
+    background-color: #666;
+  }
+}
 .features-section {
   padding-bottom: 172px;
+}
+@media screen and (max-width: 600px) {
+  .features-section {
+    padding-bottom: 57px;
+  }
 }
 
 .find__wrap {
@@ -1010,6 +1144,7 @@ input[type=checkbox] {
 .gallery-track {
   overflow: hidden;
   position: relative;
+  z-index: 100;
 }
 
 .gallery-inner {
@@ -1045,6 +1180,16 @@ input[type=checkbox] {
   .gallery-item {
     width: 280px;
     height: 300px;
+  }
+}
+
+.elemnts3-adapt {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .elemnts3-adapt {
+    display: block;
+    top: -19%;
   }
 }
 

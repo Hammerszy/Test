@@ -27,6 +27,27 @@ function selectGender(gender) {
   });
 }
 
+//password
+
+ const togglePassword = document.getElementById("togglePassword");
+ const passwordInput = document.getElementById("password");
+
+ togglePassword.addEventListener("click", function () {
+   // Toggle the type attribute
+   const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+   passwordInput.setAttribute("type", type);
+
+   // Toggle the eye icon
+   const eyeIcon = this.querySelector("svg");
+   if (type === "password") {
+     eyeIcon.innerHTML =
+       '<path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>';
+   } else {
+     eyeIcon.innerHTML =
+       '<path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z"/>';
+   }
+ });
+
 //slider-section
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -37,24 +58,19 @@ document.addEventListener("DOMContentLoaded", function () {
   let startX, moveX;
   let interval;
 
-  // Налаштовуємо початковий відступ, щоб показати частини сусідніх слайдів
-  // Значно зменшуємо відступ, щоб перший слайд був ближче до краю
   function positionSlider() {
     const slideWidth = slides[0].offsetWidth;
     const containerWidth = document.querySelector(".slider-container").offsetWidth;
-    const offset = (containerWidth - slideWidth) / 8; // Зменшено з /4 на /8
+    const offset = (containerWidth - slideWidth) / 8; 
 
-    // Це встановлює початковий відступ для першого слайду
     slider.style.transform = `translateX(${offset}px)`;
 
-    // Додаємо відступи для слайдів, щоб вони були центровані
     slides.forEach((slide) => {
       slide.style.marginLeft = "10px";
       slide.style.marginRight = "10px";
     });
   }
 
-  // Функція для переходу до конкретного слайду
   function goToSlide(index) {
     if (index < 0) {
       currentIndex = slideCount - 1;
@@ -66,34 +82,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const slideWidth = slides[0].offsetWidth;
     const containerWidth = document.querySelector(".slider-container").offsetWidth;
-    const offset = (containerWidth - slideWidth) / 8; // Зменшено з /4 на /8
+    const offset = (containerWidth - slideWidth) / 8;
 
-    // Розрахунок зміщення для поточного слайду
-    const position = offset - currentIndex * (slideWidth + 20); // 20 це сума відступів слайда (10px з кожного боку)
+    const position = offset - currentIndex * (slideWidth + 20); 
 
     slider.style.transform = `translateX(${position}px)`;
 
-    // Перезапускаємо автоматичну зміну слайдів
     resetInterval();
   }
 
-  // Функція для переходу до наступного слайду
   function nextSlide() {
     goToSlide(currentIndex + 1);
   }
 
-  // Функція для запуску автоматичної зміни слайдів
   function startAutoSlide() {
-    interval = setInterval(nextSlide, 3000); // Зміна кожні 3 секунди
+    interval = setInterval(nextSlide, 3000); 
   }
 
-  // Функція для перезапуску автоматичної зміни слайдів
   function resetInterval() {
     clearInterval(interval);
     startAutoSlide();
   }
 
-  // Обробники подій для перетягування слайдера мишею
   slider.addEventListener("mousedown", function (e) {
     e.preventDefault();
     startX = e.clientX;
@@ -108,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
     moveX = e.clientX - startX;
     const slideWidth = slides[0].offsetWidth;
     const containerWidth = document.querySelector(".slider-container").offsetWidth;
-    const offset = (containerWidth - slideWidth) / 8; // Зменшено з /4 на /8
+    const offset = (containerWidth - slideWidth) / 8; 
     const position = offset - currentIndex * (slideWidth + 20) + moveX;
 
     slider.style.transform = `translateX(${position}px)`;
@@ -119,13 +129,13 @@ document.addEventListener("DOMContentLoaded", function () {
     slider.style.cursor = "grab";
 
     if (moveX < -100) {
-      // Свайп вліво - наступний слайд
+      
       nextSlide();
     } else if (moveX > 100) {
-      // Свайп вправо - попередній слайд
+     
       goToSlide(currentIndex - 1);
     } else {
-      // Повертаємось на поточний слайд, якщо зміщення невелике
+      
       goToSlide(currentIndex);
     }
 
@@ -133,7 +143,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.removeEventListener("mouseup", onMouseUp);
   }
 
-  // Додаємо підтримку сенсорних пристроїв
   slider.addEventListener("touchstart", function (e) {
     startX = e.touches[0].clientX;
     slider.style.transition = "none";
@@ -146,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
     moveX = e.touches[0].clientX - startX;
     const slideWidth = slides[0].offsetWidth;
     const containerWidth = document.querySelector(".slider-container").offsetWidth;
-    const offset = (containerWidth - slideWidth) / 8; // Зменшено з /4 на /8
+    const offset = (containerWidth - slideWidth) / 8; 
     const position = offset - currentIndex * (slideWidth + 20) + moveX;
 
     slider.style.transform = `translateX(${position}px)`;
@@ -156,13 +165,13 @@ document.addEventListener("DOMContentLoaded", function () {
     slider.style.transition = "transform 0.5s ease";
 
     if (moveX < -50) {
-      // Свайп вліво - наступний слайд
+    
       nextSlide();
     } else if (moveX > 50) {
-      // Свайп вправо - попередній слайд
+     
       goToSlide(currentIndex - 1);
     } else {
-      // Повертаємось на поточний слайд, якщо зміщення невелике
+
       goToSlide(currentIndex);
     }
 
@@ -170,13 +179,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document.removeEventListener("touchend", onTouchEnd);
   }
 
-  // Ініціалізація слайдера
+
   window.addEventListener("load", function () {
     positionSlider();
     startAutoSlide();
   });
 
-  // Коригуємо позиціонування при зміні розміру вікна
+
   window.addEventListener("resize", positionSlider);
 });
 
@@ -195,32 +204,25 @@ document.addEventListener("DOMContentLoaded", function () {
    let animationID = 0;
    let interval;
 
-   // Налаштування початкової позиції для показу частини першого і останнього слайдів
    function setupGallery() {
      const trackWidth = document.querySelector(".gallery-track").offsetWidth;
      const itemWidth = galleryItems[0].offsetWidth;
      const itemMargin = 10; // margin-left + margin-right
      const totalItemWidth = itemWidth + itemMargin;
 
-     // Кількість елементів, що можуть поміститися у вікні перегляду
      const visibleItems = Math.floor(trackWidth / totalItemWidth);
 
-     // Загальна ширина всіх елементів
      const totalWidth = itemCount * totalItemWidth;
 
-     // Встановлюємо ширину для внутрішнього контейнера
      galleryInner.style.width = `${totalWidth}px`;
 
-     // Центруємо галерею з видимими крайніми елементами
      const offset = (trackWidth - visibleItems * totalItemWidth) / 2;
      galleryInner.style.transform = `translateX(${offset}px)`;
 
-     // Запам'ятовуємо поточне зміщення
      currentTranslate = offset;
      prevTranslate = offset;
    }
 
-   // Функція для автоматичного гортання слайдів
    function startAutoSlide() {
      interval = setInterval(() => {
        const trackWidth = document.querySelector(".gallery-track").offsetWidth;
@@ -228,15 +230,12 @@ document.addEventListener("DOMContentLoaded", function () {
        const itemMargin = 10;
        const totalItemWidth = itemWidth + itemMargin;
 
-       // Переміщуємо на ширину одного елемента
        currentTranslate -= totalItemWidth;
 
-       // Перевіряємо чи дійшли до кінця
        const maxTranslate = -(galleryInner.offsetWidth - trackWidth + totalItemWidth / 2);
 
        if (currentTranslate < maxTranslate) {
-         // Якщо дійшли до кінця, повертаємось на початок
-         currentTranslate = (trackWidth - (itemWidth + itemMargin)) / 2;
+        currentTranslate = (trackWidth - (itemWidth + itemMargin)) / 2;
        }
 
        prevTranslate = currentTranslate;
@@ -244,27 +243,22 @@ document.addEventListener("DOMContentLoaded", function () {
      }, 3000);
    }
 
-   // Функція для встановлення позиції слайдера
    function setSliderPosition() {
      galleryInner.style.transform = `translateX(${currentTranslate}px)`;
    }
 
-   // Функція для перезапуску автоматичного гортання
    function resetInterval() {
      clearInterval(interval);
      startAutoSlide();
    }
 
-   // Обробники подій для перетягування мишею
    galleryItems.forEach((item) => {
-     // Відключаємо вбудований drag & drop
      const preventDragHandler = (e) => {
        e.preventDefault();
      };
 
      item.addEventListener("dragstart", preventDragHandler);
 
-     // Обробники подій мишею
      item.addEventListener("mousedown", startDrag);
      item.addEventListener("touchstart", startDrag, { passive: true });
    });
@@ -273,11 +267,9 @@ document.addEventListener("DOMContentLoaded", function () {
      isDragging = true;
      startX = event.type.includes("mouse") ? event.clientX : event.touches[0].clientX;
 
-     // Зупиняємо анімацію та автогортання під час перетягування
      cancelAnimationFrame(animationID);
      clearInterval(interval);
 
-     // Прибираємо перехід для плавного перетягування
      galleryInner.style.transition = "none";
    }
 
@@ -292,10 +284,8 @@ document.addEventListener("DOMContentLoaded", function () {
      moveX = currentX - startX;
      currentTranslate = prevTranslate + moveX;
 
-     // Оновлюємо позицію слайдера
      setSliderPosition();
 
-     // Запобігаємо скролу сторінки під час свайпу на мобільних
      if (event.type.includes("touch")) {
        event.preventDefault();
      }
@@ -308,23 +298,18 @@ document.addEventListener("DOMContentLoaded", function () {
      if (!isDragging) return;
      isDragging = false;
 
-     // Повертаємо перехід для плавної анімації
      galleryInner.style.transition = "transform 0.5s ease";
 
-     // Оновлюємо попередню позицію
      prevTranslate = currentTranslate;
 
-     // Перезапускаємо автоматичне гортання
      resetInterval();
    }
 
-   // Ініціалізація галереї при завантаженні
    window.addEventListener("load", function () {
      setupGallery();
      startAutoSlide();
    });
 
-   // Оновлення при зміні розміру вікна
    window.addEventListener("resize", function () {
      clearInterval(interval);
      setupGallery();
@@ -355,4 +340,113 @@ document.addEventListener("DOMContentLoaded", function () {
        }
      });
    });
+ });
+
+ //adaptive slider
+
+ document.addEventListener("DOMContentLoaded", function () {
+   // Select all blocks and containers
+   const blocks = document.querySelectorAll(".block__join");
+   const sliderContainer = document.querySelector(".slider-container__join");
+   const slider = document.querySelector(".slideres");
+   const paginationContainer = document.querySelector(".slider-pagination");
+
+   // Create slider from blocks
+   blocks.forEach((block, index) => {
+     // Create slide
+     const slide = document.createElement("div");
+     slide.classList.add("slidee");
+     slide.innerHTML = block.innerHTML;
+     slider.appendChild(slide);
+
+     // Create pagination dot
+     const dot = document.createElement("div");
+     dot.classList.add("dot");
+     if (index === 0) dot.classList.add("active");
+     dot.setAttribute("data-index", index);
+     dot.addEventListener("click", () => goToSlide(index));
+     paginationContainer.appendChild(dot);
+   });
+
+   // Slider functionality
+   let currentSlide = 0;
+   const slidesCount = blocks.length;
+   let autoSlideInterval;
+
+   // Function to go to specific slide
+   function goToSlide(index) {
+     currentSlide = index;
+     slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+     // Update active dot
+     document.querySelectorAll(".dot").forEach((dot, i) => {
+       dot.classList.toggle("active", i === currentSlide);
+     });
+   }
+
+   // Function for next slide
+   function nextSlide() {
+     goToSlide((currentSlide + 1) % slidesCount);
+   }
+
+   // Function for previous slide
+   function prevSlide() {
+     goToSlide((currentSlide - 1 + slidesCount) % slidesCount);
+   }
+
+   // Touch swipe functionality
+   let touchStartX = 0;
+   let touchEndX = 0;
+
+   slider.addEventListener(
+     "touchstart",
+     (e) => {
+       touchStartX = e.changedTouches[0].screenX;
+       clearInterval(autoSlideInterval); // Pause auto-sliding when user touches
+     },
+     { passive: true }
+   );
+
+   slider.addEventListener(
+     "touchend",
+     (e) => {
+       touchEndX = e.changedTouches[0].screenX;
+       handleSwipe();
+       startAutoSlide(); // Resume auto-sliding
+     },
+     { passive: true }
+   );
+
+   function handleSwipe() {
+     const swipeThreshold = 50; // Minimum swipe distance
+
+     if (touchStartX - touchEndX > swipeThreshold) {
+       // Swipe left - next slide
+       nextSlide();
+     } else if (touchEndX - touchStartX > swipeThreshold) {
+       // Swipe right - previous slide
+       prevSlide();
+     }
+   }
+
+   // Auto-sliding functionality
+   function startAutoSlide() {
+     clearInterval(autoSlideInterval);
+     autoSlideInterval = setInterval(() => {
+       nextSlide();
+     }, 4000); // Change slide every 4 seconds
+   }
+
+   // Check screen width to initialize slider if needed
+   function checkWidth() {
+     if (window.innerWidth <= 500) {
+       startAutoSlide();
+     } else {
+       clearInterval(autoSlideInterval);
+     }
+   }
+
+   // Check width on load and window resize
+   window.addEventListener("resize", checkWidth);
+   checkWidth();
  });

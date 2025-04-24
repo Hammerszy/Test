@@ -1,5 +1,8 @@
 .features-section {
     padding-bottom: 172px;
+    @media screen and (max-width: 600px) {
+        padding-bottom: 57px;
+    }
 }
 
 .find__wrap {

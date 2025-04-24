@@ -75,6 +75,8 @@ a {
     border-radius: 10px;
     text-align: center;
     margin: 0 auto;
+    position: relative;
+    z-index: 100;
     @media screen and (max-width: 1148px) {
       font-size: 20px;
       width: 320px;
@@ -83,4 +85,14 @@ a {
       font-size: 20px;
       width: 320px;
     }
+    @media screen and (max-width: 450px) {
+      width: 280px;
+    }
+    @media screen and (max-width: 375px) {
+      width: 100%;
+    }
+}
+
+.gallry__free {
+  padding: 0 30px;
 }

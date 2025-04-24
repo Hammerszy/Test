@@ -44,6 +44,7 @@
 .gallery-track {
   overflow: hidden;
   position: relative;
+  z-index: 100;
 }
 
 .gallery-inner {
@@ -74,5 +75,14 @@
     @media screen and (max-width: 550px) {
         width: 280px;
         height: 300px;
+    }
+}
+
+
+.elemnts3-adapt {
+  display: none;
+  @media screen and (max-width: 600px) {
+        display: block;
+        top: -19%;
     }
 }
