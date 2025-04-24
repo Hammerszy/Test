@@ -450,6 +450,11 @@ header nav {
   border: none;
   padding: 0;
 }
+@media screen and (max-width: 500px) {
+  .password-toggle {
+    top: 39px;
+  }
+}
 
 .eye-icon {
   width: 24px;

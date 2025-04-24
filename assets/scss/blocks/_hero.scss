@@ -173,6 +173,9 @@
   background: transparent;
   border: none;
   padding: 0;
+  @media screen and (max-width: 500px) {
+    top: 39px;
+  }
 }
 
 .eye-icon {
