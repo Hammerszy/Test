@@ -331,3 +331,28 @@ document.addEventListener("DOMContentLoaded", function () {
      startAutoSlide();
    });
  });
+
+//linf-for-form
+
+ document.addEventListener("DOMContentLoaded", function () {
+   // Select all links with class "link__free"
+   const freeLinks = document.querySelectorAll("a.link__free");
+
+   // Add click event listener to each link
+   freeLinks.forEach((link) => {
+     link.addEventListener("click", function (e) {
+       e.preventDefault(); // Prevent default anchor behavior
+
+       // Find the form container
+       const formContainer = document.querySelector(".container__form");
+
+       // Scroll to the form container smoothly if it exists
+       if (formContainer) {
+         formContainer.scrollIntoView({
+           behavior: "smooth",
+           block: "start"
+         });
+       }
+     });
+   });
+ });

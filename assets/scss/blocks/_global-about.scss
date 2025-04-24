@@ -10,6 +10,9 @@
     text-align: center;
     position: relative;
     z-index: 1000;
+    @media screen and (max-width: 1148px) {
+      padding: 53px 0 66px 0;
+    }
 }
 
 
@@ -22,6 +25,9 @@
         font-size: 24px;
         &:first-child {
             margin-bottom: 24px;
+        }
+        @media screen and (max-width: 1148px) {
+            font-size: 20px;
         }
     }
     span {
@@ -39,6 +45,9 @@
     top: -18%;
     right: -5%;
     z-index: 1;
+    @media screen and (max-width: 1258px) {
+      right: 0%;
+    }
 }
 
 .circle-2 {

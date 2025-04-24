@@ -1,6 +1,9 @@
 
 .universe-communication {
     padding-bottom: 217px;
+     @media screen and (max-width: 1150px) {
+         padding-bottom: 172px;
+    }
 }
 
 .streaming__titles {
@@ -18,6 +21,9 @@
   font-size: 24px;
   max-width: 558px;
   margin: 0 auto;
+    @media screen and (max-width: 1150px) {
+     font-size: 20px;
+    }
 }
 
 .gallery-wrapper {
@@ -48,4 +54,7 @@
   img {
     border-radius: 40px;
   }
+   @media screen and (max-width: 1288px) {
+      width: 400px;
+    }
 }

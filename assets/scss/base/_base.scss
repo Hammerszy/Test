@@ -44,6 +44,11 @@ a {
     text-align: center;
     position: relative;
     z-index: 100;
+
+    @media screen and (max-width: 1148px) {
+      font-size: 45px;
+      margin-bottom: 35px;
+    }
 }
 
 .link__free {
@@ -58,5 +63,8 @@ a {
     border-radius: 10px;
     text-align: center;
     margin: 0 auto;
-    
+    @media screen and (max-width: 1148px) {
+      font-size: 20px;
+      width: 320px;
+    }
 }

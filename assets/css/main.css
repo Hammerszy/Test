@@ -130,6 +130,12 @@ a {
   position: relative;
   z-index: 100;
 }
+@media screen and (max-width: 1148px) {
+  .h2title__global {
+    font-size: 45px;
+    margin-bottom: 35px;
+  }
+}
 
 .link__free {
   background: #574DCC;
@@ -143,6 +149,12 @@ a {
   border-radius: 10px;
   text-align: center;
   margin: 0 auto;
+}
+@media screen and (max-width: 1148px) {
+  .link__free {
+    font-size: 20px;
+    width: 320px;
+  }
 }
 
 header {
@@ -190,6 +202,11 @@ header nav {
   right: -5%;
   z-index: 1;
 }
+@media screen and (max-width: 1530px) {
+  .elemnts1 {
+    right: 1%;
+  }
+}
 
 .gradient-circles {
   position: absolute;
@@ -225,10 +242,21 @@ header nav {
   max-width: 730px;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 1148px) {
+  .hero__title {
+    font-size: 45px;
+    margin-bottom: 24px;
+  }
+}
 
 .hero__subtitle {
   font-size: 24px;
   max-width: 421px;
+}
+@media screen and (max-width: 1148px) {
+  .hero__subtitle {
+    font-size: 20px;
+  }
 }
 
 .google__signup {
@@ -252,6 +280,11 @@ header nav {
 }
 .google__signup:hover {
   opacity: 0.75;
+}
+@media screen and (max-width: 1080px) {
+  .google__signup {
+    width: 100%;
+  }
 }
 
 .or {
@@ -284,6 +317,11 @@ header nav {
 }
 .sign__input::placeholder {
   color: #8789A1;
+}
+@media screen and (max-width: 1080px) {
+  .sign__input {
+    width: 100%;
+  }
 }
 
 .envelope__img {
@@ -381,6 +419,12 @@ header nav {
   border-radius: 40px;
   cursor: pointer;
 }
+@media screen and (max-width: 1288px) {
+  .slides__img img {
+    width: 450px;
+    height: unset;
+  }
+}
 
 /* Додаємо текст для прикладу */
 .slides__img {
@@ -403,6 +447,11 @@ header nav {
   position: relative;
   z-index: 1000;
 }
+@media screen and (max-width: 1148px) {
+  .about__wrap {
+    padding: 53px 0 66px 0;
+  }
+}
 
 .about__txts {
   max-width: 650px;
@@ -414,6 +463,11 @@ header nav {
 }
 .about__txts p:first-child {
   margin-bottom: 24px;
+}
+@media screen and (max-width: 1148px) {
+  .about__txts p {
+    font-size: 20px;
+  }
 }
 .about__txts span {
   font-weight: 700;
@@ -431,6 +485,11 @@ header nav {
   top: -18%;
   right: -5%;
   z-index: 1;
+}
+@media screen and (max-width: 1258px) {
+  .elemnts2 {
+    right: 0%;
+  }
 }
 
 .circle-2 {
@@ -527,7 +586,6 @@ header nav {
   padding: 42px 109px 42px 130px;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 20px;
   border-radius: 30px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -540,6 +598,11 @@ header nav {
   font-size: 24px;
   font-family: "Cera Round Pro DEMO", sans-serif;
 }
+@media screen and (max-width: 1150px) {
+  .feature__title {
+    font-size: 20px;
+  }
+}
 
 .elemnts4 {
   position: absolute;
@@ -550,6 +613,11 @@ header nav {
 
 .universe-communication {
   padding-bottom: 217px;
+}
+@media screen and (max-width: 1150px) {
+  .universe-communication {
+    padding-bottom: 172px;
+  }
 }
 
 .streaming__titles {
@@ -567,6 +635,11 @@ header nav {
   font-size: 24px;
   max-width: 558px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1150px) {
+  .streaming__subtitle {
+    font-size: 20px;
+  }
 }
 
 .gallery-wrapper {
@@ -596,6 +669,11 @@ header nav {
 }
 .gallery-item img {
   border-radius: 40px;
+}
+@media screen and (max-width: 1288px) {
+  .gallery-item {
+    width: 400px;
+  }
 }
 
 .dedicated__wrap {
@@ -638,6 +716,11 @@ header nav {
   right: 30%;
   z-index: 1;
 }
+@media screen and (max-width: 1323px) {
+  .elemnts5 {
+    right: 25%;
+  }
+}
 
 .circle-5 {
   width: 502px;
@@ -646,4 +729,61 @@ header nav {
   top: 0%;
   right: 0%;
   filter: blur(60px);
+}
+@media screen and (max-width: 1409px) {
+  .circle-5 {
+    width: 450px;
+    height: 450px;
+  }
+}
+@media screen and (max-width: 1323px) {
+  .circle-5 {
+    width: 412px;
+    height: 433px;
+  }
+}
+@media screen and (max-width: 1149px) {
+  .circle-5 {
+    width: 347px;
+    height: 376px;
+  }
+}
+
+.footer {
+  background-color: #FCFCFF;
+  padding: 103px 0 90px 0;
+  position: relative;
+  z-index: 100;
+}
+
+.footer__nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer-nav__list li {
+  margin-bottom: 22px;
+}
+.footer-nav__list li a {
+  font-size: 22px;
+  color: #303030;
+  transition: opacity 0.3s ease-in;
+}
+.footer-nav__list li a:hover {
+  opacity: 0.75;
+}
+@media screen and (max-width: 1200px) {
+  .footer-nav__list li a {
+    font-size: 20px;
+  }
+}
+.footer-nav__list li h3 {
+  font-size: 22px;
+  color: #303030;
+  font-weight: 700;
+}
+@media screen and (max-width: 1200px) {
+  .footer-nav__list li h3 {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=main.css.map */

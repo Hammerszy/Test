@@ -16,6 +16,10 @@
     top: 68%;
     right: -5%;
   z-index: 1;
+
+  @media screen and (max-width: 1530px) {
+      right: 1%
+  }
 }
 
   .gradient-circles {
@@ -51,11 +55,18 @@
   font-weight: 700;
   max-width: 730px;
   margin-bottom: 40px;
+   @media screen and (max-width: 1148px) {
+      font-size: 45px;
+      margin-bottom: 24px;
+  }
 }
 
 .hero__subtitle {
   font-size: 24px;
   max-width: 421px;
+  @media screen and (max-width: 1148px) {
+      font-size: 20px;
+  }
 }
 
 .google__signup {
@@ -76,6 +87,9 @@
   }
   @include opacity;
   margin-bottom: 18px;
+  @media screen and (max-width: 1080px) {
+      width: 100%;
+  }
 }
 
 .or {
@@ -107,6 +121,9 @@
   border-radius: 10px;
   &::placeholder {
     color: $light-gray;
+  }
+  @media screen and (max-width: 1080px) {
+      width: 100%;
   }
 }
 

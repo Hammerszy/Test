@@ -1,0 +1,33 @@
+.footer {
+    background-color: $light-white;
+    padding: 103px 0 90px 0;
+    position: relative;
+    z-index: 100;
+}
+
+.footer__nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.footer-nav__list {
+    li {
+        margin-bottom: 22px;
+        a {
+            font-size: 22px;
+            color: $light-dark;
+            @include opacity;
+            @media screen and (max-width: 1200px) {
+                font-size: 20px;
+            }
+        }
+        h3 {
+            font-size: 22px;
+            color: $light-dark;
+            font-weight: 700;
+            @media screen and (max-width: 1200px) {
+                font-size: 20px;
+            }
+        }
+    }
+}

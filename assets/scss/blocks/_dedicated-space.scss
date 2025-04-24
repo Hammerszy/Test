@@ -37,6 +37,9 @@
     top: 8%;
     right: 30%;
     z-index: 1;
+    @media screen and (max-width: 1323px) {
+       right: 25%;
+    }
 }
 
 .circle-5 {
@@ -46,4 +49,16 @@
     top: 0%;
     right: 0%;
     filter: blur(60px);
+    @media screen and (max-width: 1409px) {
+       width: 450px;
+       height: 450px;
+    }
+    @media screen and (max-width: 1323px) {
+       width: 412px;
+        height: 433px;
+    }
+    @media screen and (max-width: 1149px) {
+        width: 347px;
+        height: 376px;
+    }
 }

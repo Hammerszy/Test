@@ -12,7 +12,6 @@
     padding: 42px 109px 42px 130px;
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 20px;
     border-radius: 30px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -24,6 +23,9 @@
 .feature__title {
     font-size: 24px; 
     font-family: $font-secondary;
+    @media screen and (max-width: 1150px) {
+        font-size: 20px;
+    }
 }
 
 .elemnts4 {
