@@ -444,7 +444,7 @@ header nav {
 .password-toggle {
   position: absolute;
   right: 10px;
-  top: 54%;
+  top: 53px;
   cursor: pointer;
   background: transparent;
   border: none;
