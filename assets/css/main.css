@@ -108,6 +108,11 @@ body {
 .basic__container--Elg {
   max-width: 1468px;
 }
+@media screen and (max-width: 768px) {
+  .basic__container--Elg {
+    padding: 0 35px;
+  }
+}
 .basic__container--lg {
   max-width: 1347px;
 }
@@ -144,6 +149,11 @@ a {
 @media screen and (max-width: 600px) {
   .h2title__global {
     font-size: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .h2title__global {
+    font-size: 26px;
   }
 }
 
@@ -555,7 +565,7 @@ header nav {
   width: 102px;
   text-align: center;
   padding: 11px 30px;
-  font-size: 12px;
+  font-size: 16px;
   cursor: pointer;
 }
 .gender-option:first-child {
@@ -565,6 +575,28 @@ header nav {
 .gender-option:last-child {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+}
+@media screen and (max-width: 500px) {
+  .gender-option {
+    font-size: 12px;
+  }
+}
+
+.terms-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 500px;
+  margin-bottom: 24px;
+}
+
+input[type=checkbox] {
+  width: 30px;
+  height: 30px;
+  background-color: #F5F7F9;
+  border-radius: 4px;
+  margin-top: 4px;
+  accent-color: #F5F7F9;
 }
 
 .section-slider {
@@ -1025,6 +1057,11 @@ header nav {
   position: relative;
   z-index: 100;
 }
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 52px 0;
+  }
+}
 
 .footer__nav {
   display: grid;
@@ -1033,6 +1070,17 @@ header nav {
 @media screen and (max-width: 949px) {
   .footer__nav {
     grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .footer__nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 450px) {
+  .footer__nav {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -1052,6 +1100,11 @@ header nav {
     font-size: 20px;
   }
 }
+@media screen and (max-width: 768px) {
+  .footer-nav__list li a {
+    font-size: 16px;
+  }
+}
 .footer-nav__list li h3 {
   font-size: 22px;
   color: #303030;
@@ -1060,5 +1113,10 @@ header nav {
 @media screen and (max-width: 1200px) {
   .footer-nav__list li h3 {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer-nav__list li h3 {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=main.css.map */

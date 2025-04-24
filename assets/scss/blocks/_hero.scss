@@ -8,43 +8,42 @@
   align-items: start;
   position: relative;
   @media screen and (max-width: 1024px) {
-      flex-direction: column;
-      gap: 40px;
+    flex-direction: column;
+    gap: 40px;
   }
 }
 
 .link__signup {
   display: none;
   @media screen and (max-width: 600px) {
-      display: block;
-      position: relative;
-      z-index: 100;
+    display: block;
+    position: relative;
+    z-index: 100;
   }
 }
 
 .elemnts1 {
   position: absolute;
-    //   top: 28%;
-    // right: -26%;
-    top: 68%;
-    right: -5%;
+  //   top: 28%;
+  // right: -26%;
+  top: 68%;
+  right: -5%;
   z-index: 1;
 
   @media screen and (max-width: 1530px) {
-      right: 1%
+    right: 1%;
   }
   @media screen and (max-width: 1024px) {
-      right: unset;
-      left: 67%;
-      top: 75%;
+    right: unset;
+    left: 67%;
+    top: 75%;
   }
   @media screen and (max-width: 600px) {
-      display: none;
-     
+    display: none;
   }
 }
 
-  .gradient-circles {
+.gradient-circles {
   position: absolute;
   top: 0;
   left: 0;
@@ -71,8 +70,8 @@
 .hero__content {
   margin-top: 147px;
   @media screen and (max-width: 1024px) {
-      margin: 0 auto;
-      text-align: center;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
@@ -81,16 +80,16 @@
   font-weight: 700;
   max-width: 730px;
   margin-bottom: 40px;
-   @media screen and (max-width: 1148px) {
-      font-size: 45px;
-      margin-bottom: 24px;
+  @media screen and (max-width: 1148px) {
+    font-size: 45px;
+    margin-bottom: 24px;
   }
   @media screen and (max-width: 1024px) {
-      font-size: 35px;
+    font-size: 35px;
   }
   @media screen and (max-width: 600px) {
-      font-size: 30px;
-      margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -98,10 +97,10 @@
   font-size: 24px;
   max-width: 421px;
   @media screen and (max-width: 1148px) {
-      font-size: 20px;
+    font-size: 20px;
   }
   @media screen and (max-width: 1024px) {
-      margin: 0 auto;
+    margin: 0 auto;
   }
 }
 
@@ -122,15 +121,15 @@
     padding: 12px;
     @media screen and (max-width: 500px) {
       padding: 3px;
-  }
+    }
   }
   @include opacity;
   margin-bottom: 18px;
   @media screen and (max-width: 1080px) {
-      width: 100%;
+    width: 100%;
   }
   @media screen and (max-width: 500px) {
-      font-size: 16px;
+    font-size: 16px;
   }
 }
 
@@ -141,7 +140,7 @@
   font-size: 18px;
   margin-bottom: 16px;
   @media screen and (max-width: 500px) {
-     font-size: 15px;
+    font-size: 15px;
   }
 }
 
@@ -156,7 +155,7 @@
   color: $light-dark;
   margin-bottom: 12px;
   @media screen and (max-width: 500px) {
-     font-size: 15px;
+    font-size: 15px;
   }
 }
 
@@ -171,18 +170,18 @@
     color: $light-gray;
   }
   @media screen and (max-width: 1080px) {
-      width: 100%;
+    width: 100%;
   }
   @media screen and (max-width: 500px) {
-      padding: 14px;
-      font-size: 14px;
+    padding: 14px;
+    font-size: 14px;
   }
 }
 
 .envelope__img {
   padding: 15px !important;
   @media screen and (max-width: 500px) {
-      padding: 6px !important;
+    padding: 6px !important;
   }
 }
 
@@ -194,8 +193,8 @@
   text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.6);
   max-width: 352px;
   @media screen and (max-width: 500px) {
-      font-size: 12px;
-      margin: 0 auto;
+    font-size: 12px;
+    margin: 0 auto;
   }
 }
 
@@ -210,18 +209,18 @@
   overflow: hidden;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   @media screen and (max-width: 1024px) {
-      margin: 0 auto;
+    margin: 0 auto;
   }
   @media screen and (max-width: 600px) {
-      margin: unset;
-      max-width: unset;
-      padding: 30px 0;
+    margin: unset;
+    max-width: unset;
+    padding: 30px 0;
   }
 }
 
 .signup__form {
   @media screen and (max-width: 600px) {
-      margin-bottom: 42px;
+    margin-bottom: 42px;
   }
 }
 
@@ -236,7 +235,7 @@
   width: 50%;
   padding: 0 64px;
   @media screen and (max-width: 600px) {
-     padding: 0 36px;
+    padding: 0 36px;
   }
 }
 
@@ -264,19 +263,18 @@
   background-color: #4285f4;
 }
 
-
 .dedicated-image__adapt {
   display: none;
   @media screen and (max-width: 600px) {
-      display: block;
-      margin-bottom: 53px !important;
+    display: block;
+    margin-bottom: 53px !important;
   }
 }
 
 .dedicated-block__adapt {
   display: none;
   @media screen and (max-width: 600px) {
-      display: block;   
+    display: block;
   }
 }
 
@@ -286,7 +284,6 @@
 
 .label__checkbox {
   color: $light-gray;
-
 }
 
 .gender-options {
@@ -299,15 +296,40 @@
   width: 102px;
   text-align: center;
   padding: 11px 30px;
-  font-size: 12px;
+  font-size: 16px;
   cursor: pointer;
 
   &:first-child {
     border-top-left-radius: 8px;
-     border-bottom-left-radius: 8px;
+    border-bottom-left-radius: 8px;
   }
   &:last-child {
     border-top-right-radius: 8px;
-     border-bottom-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 12px;
   }
 }
+
+.terms-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 500px;
+  margin-bottom: 24px;
+}
+
+input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  background-color: $input-color;
+  border-radius: 4px;
+  margin-top: 4px;
+  accent-color: $input-color;
+}
+
+// .sign__now {
+//   width: 206px;
+//   padding: 10px 0;
+// }
