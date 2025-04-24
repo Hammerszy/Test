@@ -11,10 +11,17 @@
   margin: 0 auto;
   text-align: center;
   margin-bottom: 38px;
+  @media screen and (max-width: 1150px) {
+     padding: 0 30px;
+     text-align: left;
+  }
 }
 
 .streaming__title {
   margin-bottom: 26px;
+  @media screen and (max-width: 1150px) {
+     text-align: left;
+  }
 }
 
 .streaming__subtitle {
@@ -59,6 +66,10 @@
     }
     @media screen and (max-width: 1024px) {
         width: 300px;
+        height: 300px;
+    }
+    @media screen and (max-width: 550px) {
+        width: 280px;
         height: 300px;
     }
 }
