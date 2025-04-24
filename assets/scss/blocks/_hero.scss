@@ -13,6 +13,15 @@
   }
 }
 
+.link__signup {
+  display: none;
+  @media screen and (max-width: 600px) {
+      display: block;
+      position: relative;
+      z-index: 100;
+  }
+}
+
 .elemnts1 {
   position: absolute;
     //   top: 28%;
@@ -28,6 +37,10 @@
       right: unset;
       left: 67%;
       top: 75%;
+  }
+  @media screen and (max-width: 600px) {
+      display: none;
+     
   }
 }
 
@@ -107,11 +120,17 @@
     background-color: $white;
     border-radius: 7px;
     padding: 12px;
+    @media screen and (max-width: 500px) {
+      padding: 3px;
+  }
   }
   @include opacity;
   margin-bottom: 18px;
   @media screen and (max-width: 1080px) {
       width: 100%;
+  }
+  @media screen and (max-width: 500px) {
+      font-size: 16px;
   }
 }
 
@@ -121,6 +140,9 @@
   color: $light-gray;
   font-size: 18px;
   margin-bottom: 16px;
+  @media screen and (max-width: 500px) {
+     font-size: 15px;
+  }
 }
 
 .sign__group {
@@ -133,6 +155,9 @@
   font-size: 18px;
   color: $light-dark;
   margin-bottom: 12px;
+  @media screen and (max-width: 500px) {
+     font-size: 15px;
+  }
 }
 
 .sign__input {
@@ -148,10 +173,17 @@
   @media screen and (max-width: 1080px) {
       width: 100%;
   }
+  @media screen and (max-width: 500px) {
+      padding: 14px;
+      font-size: 14px;
+  }
 }
 
 .envelope__img {
   padding: 15px !important;
+  @media screen and (max-width: 500px) {
+      padding: 6px !important;
+  }
 }
 
 .info__sign {
@@ -161,6 +193,10 @@
   font-family: $font-secondary;
   text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.6);
   max-width: 352px;
+  @media screen and (max-width: 500px) {
+      font-size: 12px;
+      margin: 0 auto;
+  }
 }
 
 .container__form {
@@ -176,6 +212,17 @@
   @media screen and (max-width: 1024px) {
       margin: 0 auto;
   }
+  @media screen and (max-width: 600px) {
+      margin: unset;
+      max-width: unset;
+      padding: 30px 0;
+  }
+}
+
+.signup__form {
+  @media screen and (max-width: 600px) {
+      margin-bottom: 42px;
+  }
 }
 
 .slides {
@@ -188,6 +235,9 @@
 .slide {
   width: 50%;
   padding: 0 64px;
+  @media screen and (max-width: 600px) {
+     padding: 0 36px;
+  }
 }
 
 /* Pagination */
@@ -219,5 +269,45 @@
   display: none;
   @media screen and (max-width: 600px) {
       display: block;
+      margin-bottom: 53px !important;
+  }
+}
+
+.dedicated-block__adapt {
+  display: none;
+  @media screen and (max-width: 600px) {
+      display: block;   
+  }
+}
+
+.input__checkbox {
+  background-color: $input-color;
+}
+
+.label__checkbox {
+  color: $light-gray;
+
+}
+
+.gender-options {
+  display: flex;
+  gap: 12px;
+}
+.gender-option {
+  background-color: $input-color;
+  color: $light-gray;
+  width: 102px;
+  text-align: center;
+  padding: 11px 30px;
+  font-size: 12px;
+  cursor: pointer;
+
+  &:first-child {
+    border-top-left-radius: 8px;
+     border-bottom-left-radius: 8px;
+  }
+  &:last-child {
+    border-top-right-radius: 8px;
+     border-bottom-right-radius: 8px;
   }
 }

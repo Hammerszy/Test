@@ -141,6 +141,11 @@ a {
     font-size: 35px;
   }
 }
+@media screen and (max-width: 600px) {
+  .h2title__global {
+    font-size: 30px;
+  }
+}
 
 .link__free {
   background: #574DCC;
@@ -218,6 +223,17 @@ header nav {
   }
 }
 
+.link__signup {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .link__signup {
+    display: block;
+    position: relative;
+    z-index: 100;
+  }
+}
+
 .elemnts1 {
   position: absolute;
   top: 68%;
@@ -234,6 +250,11 @@ header nav {
     right: unset;
     left: 67%;
     top: 75%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .elemnts1 {
+    display: none;
   }
 }
 
@@ -329,12 +350,22 @@ header nav {
   border-radius: 7px;
   padding: 12px;
 }
+@media screen and (max-width: 500px) {
+  .google__signup img {
+    padding: 3px;
+  }
+}
 .google__signup:hover {
   opacity: 0.75;
 }
 @media screen and (max-width: 1080px) {
   .google__signup {
     width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .google__signup {
+    font-size: 16px;
   }
 }
 
@@ -344,6 +375,11 @@ header nav {
   color: #8789A1;
   font-size: 18px;
   margin-bottom: 16px;
+}
+@media screen and (max-width: 500px) {
+  .or {
+    font-size: 15px;
+  }
 }
 
 .sign__group {
@@ -356,6 +392,11 @@ header nav {
   font-size: 18px;
   color: #303030;
   margin-bottom: 12px;
+}
+@media screen and (max-width: 500px) {
+  .sign__label {
+    font-size: 15px;
+  }
 }
 
 .sign__input {
@@ -374,9 +415,20 @@ header nav {
     width: 100%;
   }
 }
+@media screen and (max-width: 500px) {
+  .sign__input {
+    padding: 14px;
+    font-size: 14px;
+  }
+}
 
 .envelope__img {
   padding: 15px !important;
+}
+@media screen and (max-width: 500px) {
+  .envelope__img {
+    padding: 6px !important;
+  }
 }
 
 .info__sign {
@@ -386,6 +438,12 @@ header nav {
   font-family: "Cera Round Pro DEMO", sans-serif;
   text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.6);
   max-width: 352px;
+}
+@media screen and (max-width: 500px) {
+  .info__sign {
+    font-size: 12px;
+    margin: 0 auto;
+  }
 }
 
 .container__form {
@@ -404,6 +462,19 @@ header nav {
     margin: 0 auto;
   }
 }
+@media screen and (max-width: 600px) {
+  .container__form {
+    margin: unset;
+    max-width: unset;
+    padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .signup__form {
+    margin-bottom: 42px;
+  }
+}
 
 .slides {
   display: flex;
@@ -415,6 +486,11 @@ header nav {
 .slide {
   width: 50%;
   padding: 0 64px;
+}
+@media screen and (max-width: 600px) {
+  .slide {
+    padding: 0 36px;
+  }
 }
 
 /* Pagination */
@@ -447,11 +523,57 @@ header nav {
 @media screen and (max-width: 600px) {
   .dedicated-image__adapt {
     display: block;
+    margin-bottom: 53px !important;
   }
+}
+
+.dedicated-block__adapt {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .dedicated-block__adapt {
+    display: block;
+  }
+}
+
+.input__checkbox {
+  background-color: #F5F7F9;
+}
+
+.label__checkbox {
+  color: #8789A1;
+}
+
+.gender-options {
+  display: flex;
+  gap: 12px;
+}
+
+.gender-option {
+  background-color: #F5F7F9;
+  color: #8789A1;
+  width: 102px;
+  text-align: center;
+  padding: 11px 30px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.gender-option:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.gender-option:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .section-slider {
   padding-bottom: 176px;
+}
+@media screen and (max-width: 600px) {
+  .section-slider {
+    padding-bottom: 61px;
+  }
 }
 
 .slider__wrapper {
@@ -500,6 +622,11 @@ header nav {
     width: 364px;
   }
 }
+@media screen and (max-width: 600px) {
+  .slides__img img {
+    width: 280px;
+  }
+}
 
 /* Додаємо текст для прикладу */
 .slides__img {
@@ -524,7 +651,7 @@ header nav {
 }
 @media screen and (max-width: 1148px) {
   .about__wrap {
-    padding: 53px 0 66px 0;
+    padding: 53px 30px 66px 30px;
   }
 }
 
@@ -542,6 +669,11 @@ header nav {
 @media screen and (max-width: 1148px) {
   .about__txts p {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about__txts p {
+    font-size: 16px;
   }
 }
 .about__txts span {
@@ -564,6 +696,11 @@ header nav {
 @media screen and (max-width: 1258px) {
   .elemnts2 {
     right: 0%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .elemnts2 {
+    display: none;
   }
 }
 
@@ -701,6 +838,11 @@ header nav {
   left: -20%;
   z-index: 1;
 }
+@media screen and (max-width: 600px) {
+  .elemnts4 {
+    display: none;
+  }
+}
 
 .universe-communication {
   padding-bottom: 217px;
@@ -787,6 +929,11 @@ header nav {
 .dedicated__block {
   max-width: 789px;
 }
+@media screen and (max-width: 600px) {
+  .dedicated__block {
+    padding: 0 30px;
+  }
+}
 
 .dedicated__title {
   text-align: left;
@@ -799,6 +946,11 @@ header nav {
   max-width: 540px;
   margin-bottom: 36px;
 }
+@media screen and (max-width: 600px) {
+  .dedicated__subtitle {
+    font-size: 19px;
+  }
+}
 
 .write__link {
   margin: unset;
@@ -807,10 +959,20 @@ header nav {
 .dedicated__image {
   position: relative;
 }
+@media screen and (max-width: 600px) {
+  .dedicated__image {
+    margin: 0 auto;
+  }
+}
 
 .dedicated__img {
   position: relative;
   z-index: 100;
+}
+@media screen and (max-width: 600px) {
+  .dedicated__img {
+    width: 367px;
+  }
 }
 
 .elemnts5 {
@@ -822,6 +984,11 @@ header nav {
 @media screen and (max-width: 1323px) {
   .elemnts5 {
     right: 25%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .elemnts5 {
+    right: 16%;
   }
 }
 
