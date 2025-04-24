@@ -170,6 +170,12 @@ header nav {
   display: flex;
   justify-content: end;
 }
+@media screen and (max-width: 700px) {
+  header {
+    padding-top: 93px;
+    padding-bottom: 0;
+  }
+}
 
 .header__login {
   font-size: 18px;
@@ -188,6 +194,11 @@ header nav {
 }
 .header__login:hover {
   opacity: 0.75;
+}
+@media screen and (max-width: 700px) {
+  .header__login {
+    display: none;
+  }
 }
 
 .hero {
@@ -275,6 +286,12 @@ header nav {
 @media screen and (max-width: 1024px) {
   .hero__title {
     font-size: 35px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero__title {
+    font-size: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -422,6 +439,15 @@ header nav {
 
 .pagination-dot.active {
   background-color: #4285f4;
+}
+
+.dedicated-image__adapt {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .dedicated-image__adapt {
+    display: block;
+  }
 }
 
 .section-slider {
@@ -744,6 +770,12 @@ header nav {
   .gallery-item {
     width: 300px;
     height: 300px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .dedicated-space {
+    display: none;
   }
 }
 

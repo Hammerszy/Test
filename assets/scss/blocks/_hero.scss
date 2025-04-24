@@ -75,6 +75,10 @@
   @media screen and (max-width: 1024px) {
       font-size: 35px;
   }
+  @media screen and (max-width: 600px) {
+      font-size: 30px;
+      margin-bottom: 20px;
+  }
 }
 
 .hero__subtitle {
@@ -211,3 +215,9 @@
 }
 
 
+.dedicated-image__adapt {
+  display: none;
+  @media screen and (max-width: 600px) {
+      display: block;
+  }
+}

@@ -1,3 +1,9 @@
+.dedicated-space {
+    @media screen and (max-width: 600px) {
+      display: none;
+  }
+}
+
 .dedicated__wrap {
     display: flex;
     align-items: center;
