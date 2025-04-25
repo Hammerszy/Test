@@ -13,18 +13,120 @@
           <button class="header__login">Log in</button>
         </nav>
 
-          <!-- <div class="modal" id="loginModal">
-                <div class="modal-content">
-                    <span class="close-modal">&times;</span>
+        <div class="modal" id="loginModal">
+          <div class="modal-content">
 
-              
+            <div class="container__form">
+                <span class="close-modal">&times;</span>
+
+              <div class="slides">
+                <div class="slide" id="slide1">
+                  <form class="signup__form">
+                    <button type="button" class="google__signup">
+                      <img src="./assets/img/svg/google.svg" alt="Google" />
+                      Sign up with Google
+                    </button>
+
+                    <span class="or">or</span>
+
+                    <div class="sign__group">
+                      <label for="email" class="sign__label">Email</label>
+                      <input
+                        class="sign__input"
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="e.g. Alex@email.com"
+                        required
+                      />
+                    </div>
+
+                    <div class="sign__group">
+                      <label for="password" class="sign__label">Password</label>
+                      <input
+                        class="sign__input"
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="8+ characters"
+                        required
+                      />
+                      <button
+                        type="button"
+                        class="password-toggle"
+                        id="togglePassword"
+                        aria-label="Toggle password visibility"
+                      >
+                        <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <path
+                            d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+
+                    <button type="button" class="google__signup">
+                      <img class="envelope__img" src="./assets/img/svg/envelope.svg" alt="Google" />
+                      Sign up with Google
+                    </button>
+
+                    <div class="notification" id="notification">Thank you for registering on our platform 💗</div>
+
+                    <p class="info__sign">
+                      You hereby confirm that you are fully able and competent to access Livebeam and comply with the
+                      Terms of Use & Service, and are at least eighteen (18) years of age or the age of majority under
+                      the law of the jurisdiction of your residence and the one you are accessing Livebeam from.
+                    </p>
+                  </form>
                 </div>
-            </div> -->
 
+                <div class="slide" id="slide2">
+                  <form class="signup__form">
+                    <div class="sign__group">
+                      <label class="sign__label">I am</label>
+                      <div class="gender-options">
+                        <div class="gender-option" id="male" onclick="selectGender('male')">Male</div>
+                        <div class="gender-option" id="female" onclick="selectGender('female')">Female</div>
+                      </div>
+                    </div>
+
+                    <div class="sign__group">
+                      <label for="name" class="sign__label">My name is</label>
+                      <input class="sign__input" type="text" id="name" name="name" placeholder="e.g. Alex" required />
+                    </div>
+
+                    <div class="sign__group">
+                      <label for="birthday" class="sign__label">I was born on</label>
+                      <input
+                        class="sign__input"
+                        type="text"
+                        id="birthday"
+                        name="birthday"
+                        placeholder="MM/DD/YYYY"
+                        required
+                      />
+                    </div>
+
+                    <div class="terms-checkbox">
+                      <input class="input__checkbox" type="checkbox" id="terms" name="terms" required />
+                      <label class="label__checkbox" for="terms">
+                        I have read understand and agree to Terms of Use, Privacy Policy, Disclosures&Disclaimers.
+                      </label>
+                    </div>
+                    <a href="#!" class="link__free sign__now">Sign up now</a>
+                  </form>
+                </div>
+              </div>
+
+              <div class="pagination">
+                <div class="pagination-dot active" onclick="goToSlide(0)"></div>
+                <div class="pagination-dot" onclick="goToSlide(1)"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
-
- 
 
     <main>
       <section class="hero">
@@ -52,8 +154,6 @@
                 streaming, flirting, and hot communication right now!
               </p>
             </div>
-
-          
 
             <div class="container__form">
               <div class="slides">
@@ -100,7 +200,6 @@
                           />
                         </svg>
                       </button>
-
                     </div>
 
                     <button type="button" class="google__signup">
@@ -108,9 +207,7 @@
                       Sign up with Google
                     </button>
 
-                    <div class="notification" id="notification">
-                        Thank you for registering on our platform 💗
-                    </div>
+                    <div class="notification" id="notification">Thank you for registering on our platform 💗</div>
 
                     <p class="info__sign">
                       You hereby confirm that you are fully able and competent to access Livebeam and comply with the
@@ -224,7 +321,6 @@
       <section class="global-about">
         <div class="basic__container basic__container--lg">
           <div class="about__wrap">
-
             <div class="elemnts2">
               <!-- <img src="./assets/img/elements1.png" alt="elements"> -->
               <div class="gradient-circle circle-2"></div>
@@ -249,8 +345,6 @@
             </div>
 
             <a href="#!" class="link__free">Join for free</a>
-
-            
           </div>
         </div>
       </section>
@@ -504,5 +598,4 @@
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
-
 

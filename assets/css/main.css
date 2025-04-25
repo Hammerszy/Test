@@ -238,6 +238,41 @@ header nav {
   }
 }
 
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 16px;
+  right: 27px;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
 .hero {
   padding-bottom: 128px;
 }
@@ -692,7 +727,7 @@ input[type=checkbox] {
 .notification {
   position: fixed;
   top: 20px;
-  background-color: white;
+  background-color: #fff;
   padding: 15px 25px;
   border-radius: 4px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -779,56 +814,6 @@ input[type=checkbox] {
   align-items: center;
   justify-content: center;
   font-size: 24px;
-}
-
-.modal {
-  display: none; /* Скрыто по умолчанию */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-  overflow-y: auto;
-}
-
-.modal-content {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  max-width: 500px;
-  width: 90%;
-  position: relative;
-  margin: 50px auto;
-  animation: modalFadeIn 0.3s;
-}
-
-@keyframes modalFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.close-modal {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #666;
-  transition: color 0.2s;
-  z-index: 1010;
-}
-
-.close-modal:hover {
-  color: #000;
 }
 
 .global-about {
