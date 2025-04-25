@@ -392,3 +392,26 @@ input[type="checkbox"] {
 //   width: 206px;
 //   padding: 10px 0;
 // }
+
+.notification {
+  position: fixed;
+  top: 20px;
+  background-color: white;
+  padding: 15px 25px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.notification.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.notification span {
+  margin-right: 5px;
+}

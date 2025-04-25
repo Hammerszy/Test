@@ -449,3 +449,18 @@ document.addEventListener("DOMContentLoaded", function () {
    window.addEventListener("resize", checkWidth);
    checkWidth();
  });
+
+ //notifications
+
+ const buttons = document.querySelectorAll(".google__signup");
+ const notification = document.getElementById("notification");
+
+ buttons.forEach((button) => {
+   button.addEventListener("click", () => {
+     notification.classList.add("show");
+
+     setTimeout(() => {
+       notification.classList.remove("show");
+     }, 3000);
+   });
+ });
